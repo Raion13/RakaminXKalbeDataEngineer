@@ -1,0 +1,36 @@
+import psycopg2
+
+# Melakukan percobaan koneksi
+conn = psycopg2.connect(
+    user='postgres',
+    password='qwerty123',
+    host='localhost',
+    port='5432',  # Default port for PostgreSQL
+    database='NewDB'
+)
+
+# Membuat objek cursor sebagai penanda
+cursor = conn.cursor()
+
+# Deklarasi SQL query untuk memasukkan record ke tabel 'KARYAWAN'
+insert_sql = (
+    "INSERT INTO KARYAWAN (FIRST_NAME, LAST_NAME, AGE, SEX, INCOME)"
+    "VALUES (%s, %s, %s, %s, %s)"
+)
+values = ('Erin', 'Yusrina', 30, 'F', 50000)
+
+try:
+    # Eksekusi SQL command dengan parameter values
+    cursor.execute(insert_sql, values)
+
+    # Melakukan perubahan (commit) pada database
+    conn.commit()
+    print("Data inserted successfully!")
+except psycopg2.Error as err:
+    # Rollback apabila ada issue
+    print(f"Error: {err}")
+    conn.rollback()
+
+# Menutup cursor dan koneksi ke PostgreSQL
+cursor.close()
+conn.close()
