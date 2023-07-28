@@ -1,0 +1,35 @@
+import mysql.connector
+
+# Melakukan percobaan koneksi
+conn = mysql.connector.connect(
+    user='my_username',
+    password='my_password',
+    host='localhost',
+    database='my_database'
+)
+
+# Membuat objek cursor sebagai penanda
+cursor = conn.cursor()
+
+# Deklarasi SQL query untuk memasukkan record ke tabel 'KARYAWAN'
+insert_sql = (
+    "INSERT INTO KARYAWAN (FIRST_NAME, LAST_NAME, AGE, SEX, INCOME)"
+    "VALUES (%s, %s, %s, %s, %s)"
+)
+values = ('Erin', 'Yusrina', 30, 'F', 50000)
+
+try:
+    # Eksekusi SQL command dengan parameter values
+    cursor.execute(insert_sql, values)
+
+    # Melakukan perubahan (commit) pada database
+    conn.commit()
+    print("Data inserted successfully!")
+except mysql.connector.Error as err:
+    # Rollback apabila ada issue
+    print(f"Error: {err}")
+    conn.rollback()
+
+# Menutup cursor dan koneksi ke MySQL
+cursor.close()
+conn.close()
