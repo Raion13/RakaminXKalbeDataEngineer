@@ -21,24 +21,11 @@ The main objective of this project is to gain hands-on experience in data engine
 
 | No | Task | Actions | Reasons |
 | --- | --- | --- | --- |
-| 1 | - Create a shell/bash script to check directory existence.
-- Enhance the script to handle additional conditions. | - Use variables to set the path and directory name.
-- Include variables for source and target directories, and filename.
-- Implement file copying from the source to the target directory.
-- Create a log file with "File Moved Successfully" content on success. | - Ensures flexibility in checking different directories.
-- Allows for copying files and creating log files for successful operations. |
-| 2 | Complete the Python code to insert data into a PostgreSQL database. | - Set up the connection to the PostgreSQL database.
-- Use a cursor object to execute SQL queries and insert data into the 'KARYAWAN' table. | - Establishes a connection to the database for data insertion and retrieval.
-- Facilitates data insertion into the specified table using SQL commands. |
-| 3 | Convert instructions into SQL Query Language. | - Create the 'KALBE' database and define the 'Inventory' table.
-- Insert data into the 'Inventory' table and perform SQL operations (SELECT, UPDATE, DELETE).
-- Use SQL to retrieve orders based on specified conditions. | - Sets up the database and table for storing inventory data.
-- Allows data to be added, updated, and retrieved from the 'Inventory' table using SQL commands.
-- Provides the ability to query and display specific customer orders based on conditions. |
+| 1 | Create a shell/bash script to check directory existence. Enhance the script to handle additional conditions. | Use variables to set the path and directory name. Include variables for source and target directories, and filename. Implement file copying from the source to the target directory. Create a log file with "File Moved Successfully" content on success. | Ensures flexibility in checking different directories. Allows for copying files and creating log files for successful operations. |
+| 2 | Complete the Python code to insert data into a PostgreSQL database. | Set up the connection to the PostgreSQL database. Use a cursor object to execute SQL queries and insert data into the 'KARYAWAN' table. | Establishes a connection to the database for data insertion and retrieval. Facilitates data insertion into the specified table using SQL commands. |
+| 3 | Convert instructions into SQL Query Language. | Create the 'KALBE' database and define the 'Inventory' table. Insert data into the 'Inventory' table and perform SQL operations (SELECT, UPDATE, DELETE). Use SQL to retrieve orders based on specified conditions. | - Sets up the database and table for storing inventory data. Allows data to be added, updated, and retrieved from the 'Inventory' table using SQL commands. Provides the ability to query and display specific customer orders based on conditions. |
 | 4 | Identify and solve a problem in a given picture. | Analyze the provided picture to identify the issue. | Encourages problem-solving skills and the ability to identify and resolve issues. |
-| 5 | Design a simple star schema for the KALBE database. | - Define the fact table and five dimension tables.
-- Establish relationships between the tables and specify primary and foreign keys. | - Establishes a star schema for organizing and relating data in the database.
-- Ensures data integrity and facilitates data retrieval and analysis across related tables. |
+| 5 | Design a simple star schema for the KALBE database. | Define the fact table and five dimension tables. Establish relationships between the tables and specify primary and foreign keys. | Establishes a star schema for organizing and relating data in the database. Ensures data integrity and facilitates data retrieval and analysis across related tables. |
 
 # Result
 
