@@ -1,0 +1,35 @@
+# Check whether directory exists inside a given path
+
+#!/usr/bin/env bash
+
+path=C:\data\market
+name_of_directory=Dataset_Final_Project_KN-DE.xlsx
+
+if [ -d "$path\$name_of_directory" ]; then
+  echo "Directory exists!" 
+else
+  echo "Directory does not exist"
+  mkdir "$path\$name_of_directory"
+fi
+
+# Save the code in a file main1.sh.
+# To schedule the script to run at 07:00 AM daily using Task Scheduler
+
+# Add another condition if directory exists inside the path
+
+#!/usr/bin/env bash
+
+source_dir=C:\\Users\\eriny\\Downloads\\RakaminKalbeNutritionals\\W1
+target_dir=C:\\Users\\eriny\\Downloads\\RakaminKalbeNutritionals
+name_of_directory=W4
+filename=dataset-normalization.csv
+
+if [ -d "$target_dir\\$name_of_directory" ]; then
+  cp "$source_dir\\$filename" "$target_dir\\$name_of_directory"
+  echo "File copied successfully" > "$target_dir\\log.txt" 
+else
+  echo "Directory does not exist"
+  mkdir "$target_dir\\$name_of_directory"
+fi
+
+# Save the code in a file main2.sh.
